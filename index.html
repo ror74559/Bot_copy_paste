@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>clientX/clientY example</title>
+
+    
+  </head>
+  <body onmousedown="showCoords()">
+    <input type="button"  value = 'botão'name="" onclick="showCoords()">
+    <p>Para mostrar as coordenadas do mouse em qualquer lugar da página.</p>
+    <script>
+      window.addEventListener('mousemove',function(e){
+        console.log(e)
+      })
+    </script>
+  </body>
+</html>
