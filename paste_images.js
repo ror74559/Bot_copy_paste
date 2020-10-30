@@ -61,7 +61,7 @@ async function paste_images () {
         // Enter para confirmar 
         await page.keyboard.press('Enter')
         // espera de dois segundos 
-        await page.waitForTimeout(clock + 1500)
+        await page.waitForTimeout(clock + 3500)
         // clique no botão inserir do modal através do posicionamento do botão
         await page.mouse.click(486,497)
         await page.waitForTimeout(clock)
