@@ -21,25 +21,25 @@ async function scrapeImages(){
 
     const imgListZebra = await page.evaluate(async() =>{
 
-    const NodeList = await document.querySelectorAll('div.separator > a >img')
+        const NodeList = await document.querySelectorAll('div.separator > a >img')
 
-    const data = await [...NodeList]
+        const data = await [...NodeList]
 
-    const imglist = await data.map(({src})=>({
+        const imglist = await data.map(({src})=>({
     		src
     	}));
 
    
     	return imglist
-    });
+     });
 
     if(imgListZebra != ''){
-      await page.waitForTimeout(2000)
-      console.log('Links capturados...')
-    } else{
-      await page.waitForTimeout(2000)
-      console.log('Ocorreu algum erro!')
-    }
+          await page.waitForTimeout(2000)
+          console.log('Links capturados...')
+     else{
+           await page.waitForTimeout(2000)
+           console.log('Ocorreu algum erro!')
+     }
     await page.waitForTimeout(2000)
     console.log('Preparando para criar arquivo...')
     // gravar dados em um arquivo json
